@@ -1,0 +1,24 @@
+# Node.js関連
+node_modules/
+npm-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# 環境変数ファイル
+.env
+
+# ログファイル
+logs/
+*.log
+
+# OSやエディタ関連
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# その他
+dist/
+build/
+coverage/
