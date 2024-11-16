@@ -20,8 +20,13 @@ mongoose.connect(connectionString)
 });
 
 // middleware
+app.use(express.json());
 app.use("/api/users", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/posts", postRoute);
+
+app.get("/", (req, res) => {
+  res.send("Hello, express!");
+});
 
 app.listen(PORT, () => console.log("server up"));
