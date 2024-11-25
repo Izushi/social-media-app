@@ -3,7 +3,8 @@ const app = express();
 const userRoute = require("./routes/users");
 const authRoute = require("./routes/auth");
 const postRoute = require("./routes/posts");
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+// const PORT = 3000;
 const mongoose = require("mongoose");
 require("dotenv").config();
 
@@ -29,4 +30,7 @@ app.get("/", (req, res) => {
   res.send("Hello, express!");
 });
 
-app.listen(PORT, () => console.log("server up"));
+// app.listen(PORT, () => console.log("server up"));
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
